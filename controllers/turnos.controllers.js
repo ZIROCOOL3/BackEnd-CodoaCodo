@@ -14,17 +14,11 @@ export default class turnosControllers {
         const result = await this.db.addTurno(turno)
         res.json(result)
     }
+    
     getTurnos = async (req, res) => {
         const { fecha } = req.body;
         console.log('Fecha recibida:', fecha);
         const users = await this.db.getTurnosDisponibles(fecha)
         res.json(users)
-    }
-
-
-    deleteUser = async (req, res) => {
-        const { id } = req.params
-        const result = await this.db.deleteUser(id)
-        res.json(result)
     }
 }
