@@ -39,7 +39,12 @@ export default class TurnoDaoMysql extends Mysql {
         const [result] = await this.connection.promise().query(query, [id, nombre, apellido,edad,email,obraSocial,sexo,fecha,hora,fkOdontologo])
         return result */
     }
-  
+    async modifyTurno(turno) {
+        const { id, fecha, hora } = turno
+        const query = `UPDATE ${this.table} SET fecha = ?, hora = ? WHERE id = ?`
+        const [result] = await this.connection.promise().query(query, [fecha, hora, id])
+        return result
+    }
     
     async getTurnosDisponibles(fecha) {
         try {
@@ -76,11 +81,12 @@ export default class TurnoDaoMysql extends Mysql {
 
         catch (err) {
             console.log('Problemas al obtener los turnos')
+            console.log(err)
             return []
         }
     }
 
-    async deleteUser(id) {
+    async deleteTurno(id) {
         const query = `DELETE FROM ${this.table} WHERE id = ${id}`
         const [result] = await this.connection.promise().query(query)
         return result

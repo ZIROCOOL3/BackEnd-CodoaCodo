@@ -13,9 +13,9 @@ export default class UsersRoutes extends Routes {
         this.router
             .post('/', this.controller.addTurno)
             .get('/', this.controller.getTurnos)
-/*            .get('/turno', this.controller.getUsersByName)
+            .delete('/:id', this.controller.deleteTurno)
+            .put('/', this.controller.modifyTurno)
+/*          .get('/turno', this.controller.getUsersByName)
             .get('/:id', this.controller.getUserById)
-            .put('/', this.controller.modifyUser)
-            .delete('/:id', this.controller.deleteUser)
  */    }
 }

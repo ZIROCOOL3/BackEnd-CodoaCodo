@@ -7,4 +7,5 @@ export default class TurnoHelpers {
         const turno = new Turno(parseInt(id), nombre,apellido,parseInt(edad),email,parseInt(dni),sexo,new Date(fecha),hora, parseInt(fkOdontologo))
         return turno
     }
+   
 }

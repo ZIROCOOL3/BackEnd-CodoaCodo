@@ -15,5 +15,5 @@ export default class Mysql {
                 : console.log('Conectado a la DB')
         })
     }
-
+   
 }

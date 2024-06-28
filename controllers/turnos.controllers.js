@@ -1,4 +1,5 @@
 import TurnosHelpers from '../helpers/Turnos.helpers.js'
+import ModiTurnosHelpers from '../helpers/ModiTurnos.helpers.js'
 import UsersDaoMysql from '../db/daos/turnos.dao.mysql.js'
 
 
@@ -7,6 +8,7 @@ export default class turnosControllers {
     constructor() {
         this.db = new UsersDaoMysql()
         this.helpers = new TurnosHelpers()
+        this.helpersModi = new ModiTurnosHelpers()
     }
 
     addTurno = async (req, res) => {
@@ -17,8 +19,17 @@ export default class turnosControllers {
     
     getTurnos = async (req, res) => {
         const { fecha } = req.body;
-        console.log('Fecha recibida:', fecha);
-        const users = await this.db.getTurnosDisponibles(fecha)
-        res.json(users)
+        const turno = await this.db.getTurnosDisponibles(fecha)
+        res.json(turno)
+    }
+    deleteTurno = async (req, res) => {
+        const { id } = req.params
+         const result = await this.db.deleteTurno(id)
+         res.json(result)
+    }
+    modifyTurno = async (req, res) => {
+        const turno = this.helpersModi.modiTurno(req.body)
+        const result = await this.db.modifyTurno(turno)
+        res.json(result)
     }
 }
