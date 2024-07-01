@@ -1,0 +1,379 @@
+/*  CONTACTO-------------------------------------- */
+
+.contacto-container {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--second-color);
+}
+
+.contacto {
+    height: auto;
+    width: auto;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    display: flex;
+    gap: 5% 5%;
+    padding-top: 10vh;
+}
+
+.contacto-1 {
+    width: 100vw;
+}
+
+.contacto-2 {
+    width: 100%;
+}
+
+.contaco-descripcion {
+    display: flex;
+    height: 60vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 20vh;
+}
+
+.contenedor-map iframe {
+    width: 100%;
+}
+
+.contacto-container h2,
+h3 {
+    color: green;
+}
+
+.contacto-container h2 {
+    text-align: center;
+}
+
+.contacto-2 a {
+    text-decoration: none;
+    color: black;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.bi {
+    color: var(--third-color);
+}
+
+
+@media (max-width: 576px) {
+    .contacto {
+        height: auto;
+        width: auto;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        display: flex;
+        gap: 5% 5%;
+        padding-top: 10vh;
+        flex-direction: column;
+    }
+
+    .contacto-1 {
+        width: auto;
+        height: 40vh;
+    }
+
+    .contenedor-map iframe {
+        height: 35vh;
+    }
+
+    .contaco-descripcion {
+        display: flex;
+        height: 40vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 0vh;
+    }
+}
+
+
+
+/* CONSULTAS------------------------------------------------------- */
+
+.consulta {
+    height: 100vh;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15vh;
+}
+
+.text-consulta {
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.text-consulta h2 {
+    color: green;
+}
+
+.contact-form {
+    --form-ok-color: rgba(88, 224, 167, 1);
+    --form-error-color: rgba(0, 141, 218, 1);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.contact-form input,
+textarea {
+    background-color: var(--sixth-color);
+}
+
+.contact-form>* {
+    padding: 0.5rem;
+    /* padding-top: 0.5rem;
+    padding-bottom: 0.5rem; */
+    margin: 1rem auto;
+    /* margin-top: 1rem;
+    margin-bottom: 1rem; */
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.completar {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form legend,
+.contact-form-response {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.contact-form input[type="submit"] {
+    width: 40%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form *::placeholder {
+    color: #000;
+}
+
+.contact-form [required]:valid {
+    border: thin solid var(--form-ok-color);
+}
+
+.contact-form [required]:invalid {
+    border: thin solid var(--form-error-color);
+}
+
+.contact-form-error {
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color: #fff;
+    transition: all 800ms ease;
+}
+
+.contact-form-error.is-active {
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.contact-form-loader {
+    display: flex;
+    justify-content: center;
+}
+
+.none {
+    display: none;
+}
+
+.contact-form input[type="submit"] {
+    transition: all 1s ease-in-out 500ms;
+    width: 30%;
+}
+
+
+.contact-form input[type="submit"]:hover {
+    background-color: var(--fourth-color);
+    width: 40%;
+}
+
+
+@keyframes show-message {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+
+    .consulta {
+        height: 90vh;
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 6vh;
+    }
+
+    .contact-form {
+        --form-ok-color: #4caf50;
+        --form-error-color: #f44336;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        ;
+    }
+
+    .contact-form input {
+        margin-bottom: 3%
+    }
+
+    .contact-form textarea {
+        margin-bottom: 10%
+    }
+}
+
+
+
+
+
+/* TURNOS---------------------------- */
+
+.turnos {
+    background-color: rgba(58, 225, 213, .3);
+    border-radius: 30px;
+    height: auto;
+    width: auto;
+    margin: 10vh 10vw;
+    padding: 10vh 10vw;
+
+}
+
+fieldset {
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    gap: 20px;
+}
+
+
+legend {
+    color: #008DDA;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.form-control {
+    background-color: rgba(229, 250, 240, 1);
+
+
+}
+
+.input-turnos {
+    width: 100%;
+}
+
+.input-fecha {
+    width: 15vw;
+    min-width: 150px;
+}
+
+.btn-primary {
+    background-color: #008DDA;
+    padding: 8px 50px;
+    border-radius: 30px;
+    margin: 0% auto;
+}
+
+
+
+
+
+
+
+
+
+/* FOOTER---------------------------------------------------------------- */
+
+
+.footer {
+    background-color: var(--second-color);
+    height: 40vh;
+
+}
+
+.contenedor-footer {
+    text-align: center;
+    /* background-color: var(--second-color); */
+}
+
+.nav-footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15vh;
+    padding-bottom: 2rem;
+}
+
+.redes i {
+    /* color: var(--fourth-color); */
+    color: green;
+    transition: all .3s ease-out;
+    font-size: 2rem;
+
+}
+
+.redes i:hover {
+    color: var(--first-color);
+}
+
+
+/* .text-footer {
+    padding-top: 10rem;
+    margin-top: 20rem;
+
+} */
+
+
+@media (max-width: 576px) {
+    .footer {
+        background-color: transparent;
+        height: 20vh;
+
+
+
+    }
+
+    .nav-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 4vh 2vw;
+        padding-top: 10vh;
+
+    }
+
+    .contenedor-footer {
+        background-color: var(--second-color);
+        padding-bottom: 10vh;
+    }
+}

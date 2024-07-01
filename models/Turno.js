@@ -1,6 +1,7 @@
 export default class Turno {
 
-    constructor(id, nombre, apellido,edad,email,dni,sexo,fecha,hora,fkOdontologo) {
+    constructor(turno) {
+        const {id, nombre, apellido,edad,email,dni,sexo,fecha,hora,fkOdontologo} = turno
         this.id = id
         this.nombre = nombre
         this.apellido = apellido

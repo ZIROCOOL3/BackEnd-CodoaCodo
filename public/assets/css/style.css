@@ -1,0 +1,343 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body,
+main {
+    overflow-x: hidden;
+    /* Previene el desplazamiento horizontal */
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+:root {
+    --first-color: rgba(255, 255, 255, 1);
+    --second-color: rgba(58, 225, 213, .3);
+    --third-color: rgba(0, 141, 218, 1);
+    --fourth-color: rgba(88, 224, 167, 1);
+    --sixth-color: rgba(172, 226, 225, 1);
+    --bg-alpha-color: rgba(245, 245, 245, 0.75);
+
+}
+
+body {
+    /* font-family; */
+    background-color: var(--first-color);
+}
+
+p,
+h1,
+h2,
+h3 {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+button {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+li {
+    font-family: "Roboto Condensed", sans-serif;
+    color: var(--third-color);
+}
+
+
+/* MENU-------------------------------------------------- */
+
+
+
+.header {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 12vh;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    padding-top: 4vh;
+
+}
+
+.nav ul li a {
+    text-decoration: none;
+    padding: 2vw;
+}
+
+.nav ul li {
+
+    padding-top: 0.9vh;
+}
+
+.button-menu {
+    margin-right: 2vw;
+    border-radius: 20px;
+    border-color: var(--third-color);
+    border-style: solid;
+    background-color: var(--primary-color);
+    color: var(--third-color);
+}
+
+.button-menu:hover {
+    border-color: green;
+    color: green;
+}
+
+.nav ul :nth-child(6) {
+    padding-top: 0.3%;
+}
+
+.home a img {
+    width: 4rem;
+    margin-left: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .header {
+        display: none;
+    }
+}
+
+
+/* HOME-------------------------------------- */
+
+
+.home-section {
+    height: 100vh;
+    background-image: url('../img/img-home/fondo_home.png');
+    background-size: cover;
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+.container-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    /* align-content: center; */
+}
+
+.container-home p {
+    text-align: center;
+}
+
+
+
+.container-home div {
+    display: flex;
+    gap: 1vw;
+}
+
+.h1 {
+    color: green;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 2rem;
+}
+
+.h11 {
+    color: var(--third-color);
+    font-family: "Fjalla One", sans-serif;
+    font-size: 2rem;
+}
+
+.img-logo {
+    animation: imglog 4s;
+    width: 35%;
+    opacity: 100%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .container-home {
+        padding-top: 7vh;
+    }
+
+    .img-logo {
+        width: 55%;
+        display: block;
+        animation: imglog 4s;
+    }
+}
+
+@media (max-width: 576px) {
+    .img-logo {
+        width: 80%;
+        display: block;
+    }
+
+    .container-home {
+        padding-top: 0vh;
+    }
+
+    .container-home p {
+        text-align: center;
+        margin-top: 3vh;
+    }
+}
+
+@media (max-width: 410px) {
+
+
+    .container-home p {
+        text-align: center;
+        margin-top: 0vh;
+    }
+
+
+
+    .img-logo {
+        width: 80%;
+        display: block;
+    }
+
+}
+
+
+
+
+/* NOSOTROS--------------------------------------------- */
+.nosotros {
+    box-sizing: content-box;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15vh;
+    gap: 4vh 2vw;
+    padding-bottom: 5vh;
+
+}
+
+.nosotros h2 {
+    color: green;
+}
+
+.container1 {
+    margin-top: 0vh;
+}
+
+.container4 {
+    margin-top: 0vh;
+}
+
+.container2 img {
+    width: 30vw;
+    border-radius: 10%;
+}
+
+.container3 img {
+    width: 30vw;
+    border-radius: 10%;
+
+}
+
+
+@media (max-width: 576px) {
+    .nosotros {
+        box-sizing: content-box;
+        height: 130vh;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5vh;
+        gap: 4vh 2vw;
+
+    }
+
+    .container2 img {
+        width: 70vw;
+
+    }
+
+    .container3 img {
+        width: 70vw;
+    }
+
+    .nosotros .container3 {
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .nosotros {
+        box-sizing: content-box;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5vh;
+        gap: 1vh 2vw;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    ...
+}
+
+/* 
+// Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    ...
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    ...
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    ...
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    ...
+}
+
+
+
+Breakpoint Class infix Dimensions Extra small None <576px Small sm ≥576px Medium md ≥768px Large lg ≥992px Extra large xl ≥1200px Extra extra large xxl ≥1400pxz
