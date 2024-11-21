@@ -74,6 +74,18 @@ const  getTurnosDisponibles= async (fecha)=> {
     }
 }
 
+const  getTurnos= async ()=> {
+    try {
+        const query = `SELECT * from Turnos;`
+        const [result] = await connection.promise().query(query)
+        return result
+    }
+    catch (err) {
+        console.log('Problemas al obtener los turnos')
+        console.log(err)
+        return []
+    }
+}
 const updateUser = async (id, { name, age }) => {
     const query = `UPDATE ${table} SET name = '${name}', age = ${age} WHERE id = ${id}`
     const [result] = await connection.promise().query(query)
